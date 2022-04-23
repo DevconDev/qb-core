@@ -68,6 +68,43 @@ QBShared.Jobs = {
             },
         },
 	},
+    ['firefighter'] = {
+		label = 'Firefighter',
+		defaultDuty = true,
+		offDutyPay = true,
+		grades = {
+            ['0'] = {
+                name = 'Recruit',
+                payment = 500
+            },
+            ['1'] = {
+                name = 'Firefighter',
+                payment = 600
+            },
+			['2'] = {
+                name = 'Shift Leader',
+                payment = 800
+            },
+			['2'] = {
+                name = 'Lieutenant',
+                payment = 850
+            },
+            ['4'] = {
+                name = 'Captain',
+                payment = 900
+            },
+            ['5'] = {
+                name = 'Asst. Chief',
+                isboss = true,
+                payment = 950
+            },
+			['6'] = {
+                name = 'Chief',
+				isboss = true,
+                payment = 1000
+            },
+        },
+	},
 	['realestate'] = {
 		label = 'Real Estate',
 		defaultDuty = true,
@@ -276,6 +313,33 @@ QBShared.Jobs = {
             ['0'] = {
                 name = 'Sales',
                 payment = 50
+            },
+        },
+	},
+	["burgershot"] = {
+		label = "Burgershot Employee",
+		defaultDuty = true,
+		grades = {
+            ['0'] = {
+                name = "Trainee",
+                payment = 50
+            },
+			['1'] = {
+                name = "Employee",
+                payment = 75
+            },
+			['2'] = {
+                name = "Burger Flipper",
+                payment = 100
+            },
+			['3'] = {
+                name = "Manager",
+                payment = 125
+            },
+			['4'] = {
+                name = "CEO",
+				isboss = true,
+                payment = 150
             },
         },
 	},
