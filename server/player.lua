@@ -78,14 +78,19 @@ function QBCore.Player.CheckPlayerData(source, PlayerData)
     PlayerData.metadata['dealerrep'] = PlayerData.metadata['dealerrep'] or 0
     PlayerData.metadata['craftingrep'] = PlayerData.metadata['craftingrep'] or 0
     PlayerData.metadata['attachmentcraftingrep'] = PlayerData.metadata['attachmentcraftingrep'] or 0
-    PlayerData.metadata['carboostclass'] = PlayerData.metadata['carboostclass'] or 'D'
-    PlayerData.metadata['carboostrep'] = PlayerData.metadata['carboostrep'] or 0
     PlayerData.metadata['currentapartment'] = PlayerData.metadata['currentapartment'] or nil
     PlayerData.metadata['jobrep'] = PlayerData.metadata['jobrep'] or {}
     PlayerData.metadata['jobrep']['tow'] = PlayerData.metadata['jobrep']['tow'] or 0
     PlayerData.metadata['jobrep']['trucker'] = PlayerData.metadata['jobrep']['trucker'] or 0
     PlayerData.metadata['jobrep']['taxi'] = PlayerData.metadata['jobrep']['taxi'] or 0
     PlayerData.metadata['jobrep']['hotdog'] = PlayerData.metadata['jobrep']['hotdog'] or 0
+    -- Car Boosting
+    PlayerData.metadata['carboostclass'] = PlayerData.metadata['carboostclass'] or 'D'
+    PlayerData.metadata['carboostrep'] = PlayerData.metadata['carboostrep'] or 0
+    PlayerData.metadata['laptopdata'] = PlayerData.metadata['laptopdata'] or {
+        wallpaper = 'default',
+        apps = {}
+    }
     PlayerData.metadata['callsign'] = PlayerData.metadata['callsign'] or 'NO CALLSIGN'
     PlayerData.metadata['fingerprint'] = PlayerData.metadata['fingerprint'] or QBCore.Player.CreateFingerId()
     PlayerData.metadata['walletid'] = PlayerData.metadata['walletid'] or QBCore.Player.CreateWalletId()
@@ -94,9 +99,10 @@ function QBCore.Player.CheckPlayerData(source, PlayerData)
         ['date'] = nil
     }
     PlayerData.metadata['licences'] = PlayerData.metadata['licences'] or {
-        ['driver'] = true,
+        ['driver'] = false,
         ['business'] = false,
-        ['weapon'] = false
+        ['weapon'] = false,
+        ['permit'] = false
     }
     PlayerData.metadata['inside'] = PlayerData.metadata['inside'] or {
         house = nil,
@@ -142,6 +148,7 @@ end
 function QBCore.Player.Logout(source)
     TriggerClientEvent('QBCore:Client:OnPlayerUnload', source)
     TriggerClientEvent('QBCore:Player:UpdatePlayerData', source)
+    TriggerServerEvent('qb-log:server:CreateLog', 'ambulanceduty', 'Code 0/Forgot to Clock out', 'red', '**' .. GetPlayerName(playerid) .. '**'.. ' is now Off Duty'  )
     Wait(200)
     QBCore.Players[source] = nil
 end

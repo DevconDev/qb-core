@@ -1,5 +1,5 @@
 QBShared = QBShared or {}
-QBShared.ForceJobDefaultDutyAtLogin = true -- true: Force duty state to jobdefaultDuty | false: set duty state from database last saved
+QBShared.ForceJobDefaultDutyAtLogin = false -- true: Force duty state to jobdefaultDuty | false: set duty state from database last saved
 QBShared.Jobs = {
 	['unemployed'] = {
 		label = 'Civilian',
@@ -42,7 +42,7 @@ QBShared.Jobs = {
 	},
 	['ambulance'] = {
 		label = 'EMS',
-		defaultDuty = true,
+		defaultDuty = false,
 		offDutyPay = false,
 		grades = {
             ['0'] = {
@@ -65,43 +65,6 @@ QBShared.Jobs = {
                 name = 'Chief',
 				isboss = true,
                 payment = 150
-            },
-        },
-	},
-    ['firefighter'] = {
-		label = 'Firefighter',
-		defaultDuty = true,
-		offDutyPay = true,
-		grades = {
-            ['0'] = {
-                name = 'Recruit',
-                payment = 500
-            },
-            ['1'] = {
-                name = 'Firefighter',
-                payment = 600
-            },
-			['2'] = {
-                name = 'Shift Leader',
-                payment = 800
-            },
-			['2'] = {
-                name = 'Lieutenant',
-                payment = 850
-            },
-            ['4'] = {
-                name = 'Captain',
-                payment = 900
-            },
-            ['5'] = {
-                name = 'Asst. Chief',
-                isboss = true,
-                payment = 950
-            },
-			['6'] = {
-                name = 'Chief',
-				isboss = true,
-                payment = 1000
             },
         },
 	},
@@ -207,7 +170,7 @@ QBShared.Jobs = {
 		grades = {
             ['0'] = {
                 name = 'Recruit',
-                payment = 50
+                payment = 100
             },
 			['1'] = {
                 name = 'Novice',
@@ -316,7 +279,26 @@ QBShared.Jobs = {
             },
         },
 	},
-	["burgershot"] = {
+    ["weedshop"] = {
+		label = "WeedShop Employee",
+		defaultDuty = true,
+		grades = {
+            ['0'] = {
+                name = "Trainee",
+                payment = 50
+            },
+			['1'] = {
+                name = "Employee",
+                payment = 75
+            },
+			['2'] = {
+                name = "Owner",
+                isboss = true,
+                payment = 100
+            },
+        },
+	},
+    ["burgershot"] = {
 		label = "Burgershot Employee",
 		defaultDuty = true,
 		grades = {
@@ -340,6 +322,17 @@ QBShared.Jobs = {
                 name = "CEO",
 				isboss = true,
                 payment = 150
+            },
+        },
+	},
+    ['lumberjack'] = {
+		label = 'LumberJack',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            ['0'] = {
+                name = 'Logger',
+                payment = 50
             },
         },
 	},
