@@ -4419,6 +4419,15 @@ QBShared.Vehicles = {
 		['hash'] = `nimbus`,
 		['shop'] = 'air',
 	},
+	['avenger'] = {
+		['name'] = 'Avenger',
+		['brand'] = 'Buckingham',
+		['model'] = 'avenger',
+		['price'] = 20000000,
+		['category'] = 'planes',
+		['hash'] = `avenger`,
+		['shop'] = 'air',
+	},
 	---Add on vehicles
 	['poldom'] = {
 		['name'] = 'Dominator Emergency',
