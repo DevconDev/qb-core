@@ -3094,10 +3094,10 @@ QBShared.Vehicles = {
 		['name'] = 'Deluxo',
 		['brand'] = 'Imponte',
 		['model'] = 'deluxo',
-		['price'] = 55000,
-		['category'] = 'sportsclassic',
+		['price'] = 5500000,
+		['category'] = 'restricted',
 		['hash'] = `deluxo`,
-		['shop'] = 'pdm',
+		['shop'] = 'luxury',
 	},
 	['dynasty'] = {							--DLC
 		['name'] = 'Dynasty',
@@ -4483,6 +4483,16 @@ QBShared.Vehicles = {
 		['hash'] = `dmc12cp`,
 		['shop'] = 'luxury',
 	},
+	['camper'] = {
+		['name'] = 'Camper',
+		['brand'] = 'Camper',
+		['model'] = 'camper',
+		['price'] = 25000000,
+		['category'] = 'restricted',
+		['hash'] = `camper`,
+		['shop'] = 'luxury',
+	},
+	
 }
 
 for k,v in pairs(QBShared.Vehicles) do
