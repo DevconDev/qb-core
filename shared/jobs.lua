@@ -233,6 +233,15 @@ QBShared.Jobs = {
                 name = 'Driver',
                 payment = 50
             },
+            ['1'] = {
+                name = 'Foreman',
+                payment = 100
+            },
+            ['2'] = {
+                name = 'Manager',
+				isboss = true,
+                payment = 150
+            },
         },
 	},
 	['tow'] = {
