@@ -366,4 +366,24 @@ QBShared.Jobs = {
             },
         }
     },
+    ["happyshark"] = {
+        label = "Happy Shark",
+        offDutyPay = false,
+        defaultDuty = false,
+        grades = {
+            ['0'] = {
+                name = 'Agent',
+                payment = 25,
+            },
+            ['1'] = {
+                name = 'Manager',
+                payment = 50,
+            },
+            ['2'] = {
+                name = 'Owner',
+                isboss = true,
+                payment = 75,
+            },
+        }
+    },
 }
