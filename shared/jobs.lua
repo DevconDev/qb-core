@@ -12,8 +12,37 @@ QBShared.Jobs = {
             },
         },
 	},
-	['police'] = {
-		label = 'Law Enforcement',
+	['sasp'] = {
+		label = 'San Andreas State Police',
+        type = "leo",
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            ['0'] = {
+                name = 'Recruit',
+                payment = 50
+            },
+			['1'] = {
+                name = 'Officer',
+                payment = 75
+            },
+			['2'] = {
+                name = 'Sergeant',
+                payment = 100
+            },
+			['3'] = {
+                name = 'Lieutenant',
+                payment = 125
+            },
+			['4'] = {
+                name = 'Chief',
+				isboss = true,
+                payment = 150
+            },
+        },
+	},
+    ['lspd'] = {
+		label = 'Los Santo Police Department',
         type = "leo",
 		defaultDuty = true,
 		offDutyPay = false,
@@ -60,6 +89,34 @@ QBShared.Jobs = {
             },
 			['3'] = {
                 name = 'Surgeon',
+                payment = 125
+            },
+			['4'] = {
+                name = 'Chief',
+				isboss = true,
+                payment = 150
+            },
+        },
+	},
+    ['fire'] = {
+		label = 'Fire Rescue',
+		defaultDuty = false,
+		offDutyPay = false,
+		grades = {
+            ['0'] = {
+                name = 'Recruit',
+                payment = 50
+            },
+			['1'] = {
+                name = 'Fire Fighter',
+                payment = 75
+            },
+			['2'] = {
+                name = 'Engineer',
+                payment = 100
+            },
+			['3'] = {
+                name = 'Captain',
                 payment = 125
             },
 			['4'] = {
